@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#2b3a67">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Petits Problèmes d'Échecs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♞</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pieces.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Écran d'accueil -->
+  <section id="home" class="screen active">
+    <button class="fs-btn" data-fs title="Plein écran">⛶</button>
+    <h1><span class="big-knight">♞</span> Petits Problèmes<br>d'Échecs</h1>
+    <p class="subtitle">Choisis ton niveau&nbsp;!</p>
+    <div class="levels" id="levels"></div>
+    <p class="credits">Pièces « cburnett » © Colin M.L. Burnett, CC BY-SA 3.0</p>
+  </section>
+
+  <!-- Écran de jeu -->
+  <section id="game" class="screen">
+    <div class="board-area">
+      <div id="board" class="board"></div>
+    </div>
+    <aside class="panel">
+      <div class="panel-top">
+        <button class="icon-btn" id="btn-home" title="Menu">🏠</button>
+        <div class="level-tag" id="level-tag"></div>
+        <button class="icon-btn" data-fs title="Plein écran">⛶</button>
+      </div>
+      <div class="counter" id="counter"></div>
+      <div class="goal" id="goal"></div>
+      <div class="message" id="message"></div>
+      <div class="actions">
+        <button class="act hint" id="btn-hint">💡 Indice</button>
+        <button class="act retry" id="btn-retry">↺ Recommencer</button>
+        <button class="act prev" id="btn-prev">◀</button>
+        <button class="act next" id="btn-next">Suivant ▶</button>
+      </div>
+      <div class="stars" id="stars"></div>
+    </aside>
+    <div id="celebrate" class="celebrate hidden">
+      <div class="celebrate-box">
+        <div class="trophy">🏆</div>
+        <div class="bravo" id="bravo-text">Bravo !</div>
+        <button class="act next big" id="btn-next2">Problème suivant ▶</button>
+      </div>
+    </div>
+    <canvas id="confetti"></canvas>
+  </section>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
